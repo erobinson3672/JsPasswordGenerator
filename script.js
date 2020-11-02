@@ -9,7 +9,6 @@ function promptLength(){
     alert("Error: Length is out of bounds");
     promptLength();
   }
-  console.log(leng);
   return leng;
 }
 
@@ -29,14 +28,10 @@ function specChar() {
 function generatePassword(){
   var pass = [];
   var passLeng = pass.length;
-  console.log(please);
-  console.log(passLeng);
-  console.log(confirmUppercase);
 
   while(passLeng < please){
     if(confirmUppercase === true){
       randoUp = upper();
-      console.log(randoUp);
       passLeng = pass.push(randoUp);
     }
     if(confirmLowercase === true){
@@ -59,11 +54,11 @@ function generatePassword(){
 
 // Write password to the #password input
 function writePassword() {
-confirmUppercase = confirm("Will this password contain Uppercase letters? \nSelect OK for yes and Cancel for no");
-confirmLowercase = confirm("Will this password contain Lowercase letters? \nSelect OK for yes and Cancel for no");
-confirmNumber = confirm("Will this password contain numbers? \nSelect OK for yes and Cancel for no");
-confirmCharacter = confirm("Will this password contain special characters? \nSelect OK for yes and Cancel for no");
-please = promptLength();
+  confirmUppercase = confirm("Will this password contain Uppercase letters? \nSelect OK for yes and Cancel for no");
+  confirmLowercase = confirm("Will this password contain Lowercase letters? \nSelect OK for yes and Cancel for no");
+  confirmNumber = confirm("Will this password contain numbers? \nSelect OK for yes and Cancel for no");
+  confirmCharacter = confirm("Will this password contain special characters? \nSelect OK for yes and Cancel for no");
+  please = promptLength();
 
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
